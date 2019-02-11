@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实施减税降费专题</title>
+    <link rel="stylesheet" href="css/jsjf_base.css">
+    <link rel="stylesheet" href="css/jsjf_index.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="box clearfix">
+        <div class="w clearfix">
+
+            <div class="current_location" style="margin-top:20px;">
+                <div class="title">栏目名字</div>
+                <div class="location">
+                    当前位置 : <a href="#">首页</a>-><a href="#">邯郸信息</a>-><a href="#">本地动态</a>
+                </div>
+            </div>
+            <div class="imgsList">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/jsjf_zctj_tu1.jpg" alt="">
+                            <p>描述描述</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/jsjf_zctj_tu1.jpg" alt="">
+                            <p>描述描述</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/jsjf_zctj_tu1.jpg" alt="">
+                            <p>描述描述</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/jsjf_zctj_tu1.jpg" alt="">
+                            <p>描述描述</p>
+                        </a>
+                    </li>
+                </ul>
+                <div style="margin:30px 0;padding:0 20px;" class="clearfix">
+                        <style type="text/css">
+                            .page_box {
+                                width: 100%;
+                                margin: auto auto;
+                                color: #000000;
+                                font: 300 15px/20px "微软雅黑";
+                            }
+    
+                            .page_box a {
+                                font: 300 16px/20px "微软雅黑";
+                                color: #000000;
+                            }
+    
+                            .page_box a:hover {
+                                color: #f00;
+                            }
+    
+                            .lefttotal {
+                                float: left;
+                                text-align: left;
+                                color: #000;
+                            }
+    
+                            .leftnum {
+                                color: #ff0000;
+                            }
+    
+                            .page {
+                                float: right;
+                            }
+    
+                            .fynow {
+                                padding-left: 5px;
+                                padding-right: 5px;
+                            }
+    
+                            a.pnum {
+                                padding-left: 5px;
+                                padding-right: 5px;
+                            }
+                        </style>
+    
+                        <div class="clearfix"></div>
+                        <div class="page_box">
+                            <div class="lefttotal" style="color:#000000;">共有<span class="leftnum">11</span>条信息</div>
+                            <div class="page">
+                                <script language="javascript">
+                                    var countnum = 20;
+                                    var currentPage = 0;
+                                    var prevPage = currentPage - 1
+                                    var nextPage = currentPage + 1
+                                    var countPage = 1;
+                                    var endPage = countPage - 1
+                                    document.write("<a href=\"index.html\" target=\"_self\" >首页</a>&nbsp;");
+                                    if (countPage > 1 && currentPage != 0 && currentPage != 1)
+                                        document.write("<a  href=\"index" + "_" + prevPage + "." +
+                                            "html\" target=\"_self\">上一页</a>");
+                                    else if (countPage > 1 && currentPage != 0 && currentPage == 1)
+                                        document.write("<a  href=\"index.html\" target=\"_self\">上一页</a>");
+                                    else
+                                        document.write("<span class='bg'>上一页</span>");
+                                    var num = 6;
+                                    var startPage = currentPage - 2;
+                                    if (startPage < 0) startPage = 0;
+                                    var endpage = startPage + num;
+                                    if (endpage > countPage)
+                                        endpage = countPage;
+                                    startPage = endpage - 6;
+                                    if (startPage < 0) startPage = 0;
+                                    for (var i = startPage; i < endpage; i++) {
+                                        if (currentPage == i)
+                                            document.write("<span class='fynow'>" + (i + 1) + "</span>");
+                                        else if (i == 0) {
+                                            document.write("<a  href=\"index.html\" target=\"_self\" class='pnum'>" + 1 +
+                                                "</a>");
+                                        } else
+                                            document.write("<a href=\"index" + "_" + i + "." +
+                                                "html\" target=\"_self\" class='pnum'>" + (i + 1) + "</a>");
+                                    }
+                                    if (countPage > 1 && currentPage != (countPage - 1))
+                                        document.write("<a href=\"index" + "_" + nextPage + "." +
+                                            "html\" target=\"_self\">下一页 </a>");
+                                    else
+                                        document.write("<span class='bg'>下一页 </span>");
+                                    if (countPage == 1)
+                                        document.write("<a  href=\"index.html\" target=\"_self\">尾页</a>");
+                                    else if (countPage > 1)
+                                        document.write("<a  href=\"index_" + endPage + ".html\" target=\"_self\">尾页</a>");
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix">
+        <div class="w clearfix">
+            <div class="wz">
+                版权所有：国家税务总局邯郸市税务局 技术支持：晨光网络
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>实施减税降费专题</title>
-    <link rel="stylesheet" href="css//base.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jsjf_base.css">
+    <link rel="stylesheet" href="css/jsjf_index.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <div class="box_l clearfix">
                 <div class="list1 clearfix">
                     <div class="tu">
-                        <img src="images//xjp_tu1.jpg" alt="">
+                        <img src="images/jsjf_xjp_tu1.jpg" alt="">
                     </div>
                     <div class="content clearfix">
                         <div class="top">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="list1 clearfix">
                     <div class="tu">
-                        <img src="images//xjp_tu2.jpg" alt="">
+                        <img src="images/jsjf_xjp_tu2.jpg" alt="">
                     </div>
                     <div class="content clearfix tpxw">
                         <div class="top">
@@ -188,7 +188,7 @@
                             </div>
                             <div class="bottom clearfix">
                                 <div class="tu">
-                                    <img src="images/zctj_tu1.jpg" alt="">
+                                    <img src="images/jsjf_zctj_tu1.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -323,8 +323,21 @@
             </div>
         </div>
     </div>
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.tpxw .top ul li').on('mouseover', function () {
+                $(this).addClass("now").siblings().removeClass("now");
+                $('.tpxw .top > a').attr('href', $(this).children().attr('href'))
+                $('.tpxw .bottom>div').eq($(this).index()).stop().fadeIn().siblings().stop().fadeOut();
+            });
+            $('.zxwj .top ul li').on('mouseover', function () {
+                $(this).addClass("now").siblings().removeClass("now");
+                $('.zxwj .top > a').attr('href', $(this).children().attr('href'))
+                $('.zxwj .bottom>div').eq($(this).index()).stop().fadeIn().siblings().stop().fadeOut();
+            });
+        })
+    </script>
 </body>
 
 </html>
